@@ -20,21 +20,20 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 /______/______/______/______/______/______/______/______/______/______/_____ /
 *******************************************************************************''')
 
-print('/nWelcome to Treasure Island.')
-print('/nYour mission is to find the treasure.')
-a=input('/nYou are at a junction. Where do you want to go (Type "left" or "right") ? : ').lower()
+print('Welcome to Treasure Island.')
+print('Your mission is to find the treasure.')
+a=input('You are at a junction. Where do you want to go (Type "left" or "right") ? : ').lower()
 if a=='right':
-    print('/nOops you fell into a hole. Game over')
+    print('Oops you fell into a hole. Game over')
 else:
     b=input(print('/nYou have come to a lake. There is an island at the middle of the lake. You can either swim or wait for a boat. Whats your choice ("swim" or "wait") : ')).lower()
     if b=='wait':
-        print('/nYou got attacked by an angry tribe. Game over')
+        print('You got attacked by an angry tribe. Game over')
     else:
-        c=input(print('/nYou arrived safely at the island. There\'s three doors : RED | YELLOW | GREEN . Which one do you wanna choose ? : ' )).lower()
+        c=input(print('You arrived safely at the island. There\'s three doors : RED | YELLOW | GREEN . Which one do you wanna choose ? : ' )).lower()
         if c=='red':
-            print('/nYou got burned by flames. Game over')
+            print('You got burned by flames. Game over')
         elif c=='yellow':
-            print('/nYou fell into a lave. Game over')
+            print('You fell into a lave. Game over')
         else:
-            print('/nCongratulations you have won. The treasure is yours')
-
+            print('Congratulations you have won. The treasure is yours')
