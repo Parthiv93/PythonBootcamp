@@ -26,7 +26,7 @@ a=input('You are at a junction. Where do you want to go (Type "left" or "right")
 if a=='right':
     print('Oops you fell into a hole. Game over')
 else:
-    b=input(print('/nYou have come to a lake. There is an island at the middle of the lake. You can either swim or wait for a boat. Whats your choice ("swim" or "wait") : ')).lower()
+    b=input(print('You have come to a lake. There is an island at the middle of the lake. You can either swim or wait for a boat. Whats your choice ("swim" or "wait") : ')).lower()
     if b=='wait':
         print('You got attacked by an angry tribe. Game over')
     else:
