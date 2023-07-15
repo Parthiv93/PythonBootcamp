@@ -1,12 +1,14 @@
 import random
 words=["transformers","avengers","batman","oppenheimer","barbie"]
-randchose=random.randint(0,len(words)-1)
-wordchose=words[randchose]
+blank=[]
+randchose=random.choice(words)
+wordlen=len(randchose)
+for i in range(wordlen):
+    blank.append("_")
 print("Welcome to hangman movie guesser. You have to guess the movie before the man gets hanged")
-guessword=input("Guess any letter : ")
-for i in wordchose:
-    if i==guessword:
-        print("true")
-    else:
-        print("false")
-        
+guessword=input("Guess any letter : ").lower()
+for i in range(wordlen):
+    letter=randchose[i]
+    if letter==guessword:
+        blank[i]=letter
+print(blank)
