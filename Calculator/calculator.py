@@ -14,16 +14,23 @@ operations={
     "*":MULTIPLICATION,
     "/":DIVISION,
 }
-end=False
-while end!=True:
-    num1=int(input("Enter the first number : "))
+def calculator():
+    num1=float(input("Enter the first number : "))
     for symbol in operations:
         print(symbol)
-    operations_symbol=input("Enter your choice ( + , - , * , / ) : ")
-    num2=int(input("Enter the second number : "))
-    calculation_function=operations[operations_symbol]
-    answer=calculation_function(num1,num2)
-    print(f"{num1} {operations_symbol} {num2} = {answer}")
-    stop=input("Do you want to start again (yes/no) : ")
-    if stop=="no":
-        end=True
+    should_continue=True
+    while should_continue:
+        operations_symbol=input("Enter your choice ( + , - , * , / ) : ")
+        num2=float(input("Enter the second number : "))
+        calculation_function=operations[operations_symbol]
+        answer=calculation_function(num1,num2)
+        print(f"{num1} {operations_symbol} {num2} = {answer}")
+        choice=input(f"Type 'y' to continue calculating with the value {answer} and 'n' to start from beginning. To stop the calculator type 's'  : ").lower()
+        if choice=="y":
+            num1=answer
+        elif choice=="n":
+            should_continue=False
+            calculator()
+        else:
+            return
+calculator()
