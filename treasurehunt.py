@@ -37,3 +37,4 @@ else:
             print('You fell into a lave. Game over')
         else:
             print('Congratulations you have won. The treasure is yours')
+          

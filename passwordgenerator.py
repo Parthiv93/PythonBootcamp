@@ -14,7 +14,7 @@ for i in range(1,nr_symbols+1):
    password.append(random.choice(symbols))
 for i in range(1,nr_numbers+1):
    password.append(random.choice(numbers))
-random.shuffle(password)
+random.shuffle(password) 
 for i in password:
     finalpassword+=i
 print("Random password : "+finalpassword)
